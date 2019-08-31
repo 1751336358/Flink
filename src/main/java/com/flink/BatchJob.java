@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.yss.flink;
+package com.flink;
 
 import org.apache.flink.api.java.ExecutionEnvironment;
 

@@ -1,4 +1,4 @@
-package com.yss.flink;
+package com.flink;
 
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.io.FileInputFormat;
@@ -8,7 +8,6 @@ import org.apache.flink.core.fs.Path;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.sink.RichSinkFunction;
-import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 import org.apache.flink.streaming.api.functions.source.FileProcessingMode;
 import org.apache.flink.streaming.api.functions.source.RichSourceFunction;
 
@@ -16,9 +15,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 /**
  * 自定义DataSource 和DataSink
