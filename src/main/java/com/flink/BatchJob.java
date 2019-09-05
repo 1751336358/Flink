@@ -62,5 +62,6 @@ public class BatchJob {
 
 		// execute program
 		env.execute("Flink Batch Java API Skeleton");
+
 	}
 }

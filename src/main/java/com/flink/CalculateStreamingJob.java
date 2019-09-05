@@ -12,6 +12,7 @@ import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.collector.selector.OutputSelector;
 import org.apache.flink.streaming.api.datastream.*;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.util.Collector;
 
 import java.util.ArrayList;
@@ -26,12 +27,34 @@ public class CalculateStreamingJob {
 	public static void main(String[] args) throws Exception {
 		// set up the streaming execution environment
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-		testMap(env);
+		testWordCount(env);
 		env.execute("execute");
 
 	}
 
 
+	public static void testWordCount(StreamExecutionEnvironment env){
+		DataStreamSource<String> ds = env.readTextFile("F:\\a.java");
+		ds.flatMap(new FlatMapFunction<String,WordCount>() {
+			@Override
+			public void flatMap(String value, Collector<WordCount> collector) throws Exception {
+				for(String word:value.split(" ")){
+					collector.collect(new WordCount(word,1));
+				}
+			}
+		}).keyBy(new KeySelector<WordCount,String>() {
+			@Override
+			public String getKey(WordCount o) throws Exception {
+				return o.getWord();
+			}
+		}).reduce(new ReduceFunction<WordCount>() {
+			@Override
+			public WordCount reduce(WordCount w1, WordCount w2) throws Exception {
+				WordCount wc = new WordCount(w1.getWord(),w1.getCount()+w2.getCount());
+				return wc;
+			}
+		}).setParallelism(1).writeAsText("F:\\a");
+	}
 	public static void testSplit(StreamExecutionEnvironment env){
 		DataStreamSource ds = env.fromElements(1,2,3,4,5,6,7,8,9,10);
 		ds.split(new OutputSelector<Integer>() {
@@ -163,7 +186,7 @@ class WordCount{
 
 	@Override
 	public String toString() {
-		return word+" "+count;
+		return word+":"+count;
 	}
 }
 class User{

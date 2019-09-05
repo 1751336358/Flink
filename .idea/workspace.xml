@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47e5df6f-733a-4ab0-b0fe-4c4506c78828" name="Default" comment="" />
+    <list default="true" id="47e5df6f-733a-4ab0-b0fe-4c4506c78828" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flink/BatchJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flink/BatchJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/BatchJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/CalculateStreamingJob$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/CalculateStreamingJob$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/CalculateStreamingJob$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/CalculateStreamingJob$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/CalculateStreamingJob$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/CalculateStreamingJob$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/CalculateStreamingJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/SinkStreamingJob$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/SinkStreamingJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/SinkToMySQL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/SourceToMySQL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yss/flink/WordCount.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,7 +30,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CalculateStreamingJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
+              <caret line="55" column="50" lean-forward="true" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BatchJob.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/BatchJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SourceSinkStreamingJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/SourceSinkStreamingJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -21,6 +71,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yss/flink/SinkStreamingJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yss/flink/SourceSinkStreamingJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yss/flink/CalculateStreamingJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flink/SourceSinkStreamingJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flink/BatchJob.java" />
       </list>
     </option>
   </component>
@@ -46,11 +99,13 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -77,12 +132,28 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="firstFlink" type="b2602c69:ProjectViewProjectNode" />
+              <item name="firstFlink" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="firstFlink" type="b2602c69:ProjectViewProjectNode" />
+              <item name="firstFlink" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
+              <item name="SourceSinkStreamingJob.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -109,7 +180,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SourceSinkStreamingJob">
+  <component name="RunManager" selected="Application.CalculateStreamingJob">
+    <configuration name="BatchJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.BatchJob" />
+      <module name="firstFlink" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flink.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="CalculateStreamingJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.CalculateStreamingJob" />
+      <module name="firstFlink" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flink.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="SourceSinkStreamingJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yss.flink.SourceSinkStreamingJob" />
       <module name="firstFlink" />
@@ -176,9 +269,13 @@
     <list>
       <item itemvalue="Application.StreamingJob" />
       <item itemvalue="Application.SourceSinkStreamingJob" />
+      <item itemvalue="Application.BatchJob" />
+      <item itemvalue="Application.CalculateStreamingJob" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CalculateStreamingJob" />
+        <item itemvalue="Application.BatchJob" />
         <item itemvalue="Application.SourceSinkStreamingJob" />
         <item itemvalue="Application.StreamingJob" />
       </list>
@@ -197,15 +294,22 @@
       <workItem from="1567043940032" duration="307000" />
       <workItem from="1567045184485" duration="2431000" />
       <workItem from="1567077991969" duration="3082000" />
-      <workItem from="1567220873287" duration="19585000" />
+      <workItem from="1567220873287" duration="20627000" />
+      <workItem from="1567386904871" duration="114000" />
+      <workItem from="1567511042707" duration="1802000" />
+      <workItem from="1567557869544" duration="46000" />
+      <workItem from="1567666167139" duration="1050000" />
+      <workItem from="1567678523351" duration="153000" />
+      <workItem from="1567683694010" duration="2311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25405000" />
+    <option name="totallyTimeSpent" value="31923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -216,18 +320,18 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5604027" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5599104" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18390192" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15458423" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.6409396" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5274356" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -251,30 +355,78 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="67" column="24" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/BatchJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="68" column="47" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/SourceSinkStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1180">
+          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/SourceSinkStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/BatchJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="68" column="47" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1180">
+          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/SourceSinkStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/SourceSinkStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <element signature="class#WordCount#0" />
-            <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#5008#5009#0" expanded="true" />
-            <element signature="e#5045#5046#0" expanded="true" />
-            <element signature="e#5068#5069#0" expanded="true" />
-            <element signature="e#5098#5099#0" expanded="true" />
-            <element signature="e#5117#5118#0" expanded="true" />
-            <element signature="e#5157#5158#0" expanded="true" />
-            <element signature="e#5182#5183#0" expanded="true" />
-            <element signature="e#5222#5223#0" expanded="true" />
-            <element signature="e#5250#5251#0" expanded="true" />
-            <element signature="class#User#0" />
-            <element signature="e#5450#5451#0" expanded="true" />
-            <element signature="e#5466#5467#0" expanded="true" />
-            <element signature="e#5500#5501#0" expanded="true" />
-            <element signature="e#5519#5520#0" expanded="true" />
-            <element signature="e#5551#5552#0" expanded="true" />
-            <element signature="e#5573#5574#0" expanded="true" />
-            <element signature="e#5618#5619#0" expanded="true" />
-            <element signature="e#5649#5650#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -289,28 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="48" column="55" lean-forward="true" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-          <folding>
-            <element signature="class#WordCount#0" />
-            <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#5008#5009#0" expanded="true" />
-            <element signature="e#5045#5046#0" expanded="true" />
-            <element signature="e#5068#5069#0" expanded="true" />
-            <element signature="e#5098#5099#0" expanded="true" />
-            <element signature="e#5117#5118#0" expanded="true" />
-            <element signature="e#5157#5158#0" expanded="true" />
-            <element signature="e#5182#5183#0" expanded="true" />
-            <element signature="e#5222#5223#0" expanded="true" />
-            <element signature="e#5250#5251#0" expanded="true" />
-            <element signature="class#User#0" />
-            <element signature="e#5450#5451#0" expanded="true" />
-            <element signature="e#5466#5467#0" expanded="true" />
-            <element signature="e#5500#5501#0" expanded="true" />
-            <element signature="e#5519#5520#0" expanded="true" />
-            <element signature="e#5551#5552#0" expanded="true" />
-            <element signature="e#5573#5574#0" expanded="true" />
-            <element signature="e#5618#5619#0" expanded="true" />
-            <element signature="e#5649#5650#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -325,13 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/BatchJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -394,61 +517,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/SourceSinkStreamingJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
-          <folding>
-            <element signature="docComment;method#readToMySqlDataSource#0;class#SinkStreamingJob#0" />
-            <element signature="docComment;method#readToFileDataSource#0;class#SinkStreamingJob#0" />
-            <element signature="method#readToFileDataSource#0;class#SinkStreamingJob#0" />
-            <element signature="docComment;class#SourceToMySQL#0" />
-            <element signature="method#getConnection#0;class#SourceToMySQL#0" />
-            <element signature="class#SinkToMySQL#0" />
-            <element signature="method#invoke#0;class#SinkToMySQL#0" />
-            <element signature="docComment;class#Student#0" />
-            <element signature="class#Student#0" />
-            <element signature="e#5047#5048#0" expanded="true" />
-            <element signature="e#5063#5064#0" expanded="true" />
-            <element signature="e#5097#5098#0" expanded="true" />
-            <element signature="e#5116#5117#0" expanded="true" />
-            <element signature="e#5144#5145#0" expanded="true" />
-            <element signature="e#5162#5163#0" expanded="true" />
-            <element signature="e#5199#5200#0" expanded="true" />
-            <element signature="e#5222#5223#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/SourceSinkStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1691">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-          <folding>
-            <element signature="class#WordCount#0" />
-            <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#5008#5009#0" expanded="true" />
-            <element signature="e#5045#5046#0" expanded="true" />
-            <element signature="e#5068#5069#0" expanded="true" />
-            <element signature="e#5098#5099#0" expanded="true" />
-            <element signature="e#5117#5118#0" expanded="true" />
-            <element signature="e#5157#5158#0" expanded="true" />
-            <element signature="e#5182#5183#0" expanded="true" />
-            <element signature="e#5222#5223#0" expanded="true" />
-            <element signature="e#5250#5251#0" expanded="true" />
-            <element signature="class#User#0" />
-            <element signature="e#5450#5451#0" expanded="true" />
-            <element signature="e#5466#5467#0" expanded="true" />
-            <element signature="e#5500#5501#0" expanded="true" />
-            <element signature="e#5519#5520#0" expanded="true" />
-            <element signature="e#5551#5552#0" expanded="true" />
-            <element signature="e#5573#5574#0" expanded="true" />
-            <element signature="e#5618#5619#0" expanded="true" />
-            <element signature="e#5649#5650#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="411">
+          <caret line="55" column="50" lean-forward="true" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/BatchJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
         </state>
       </provider>
     </entry>
