@@ -7,13 +7,15 @@ import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.ReduceFunction;
+import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.api.java.tuple.Tuple2;
-import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.collector.selector.OutputSelector;
-import org.apache.flink.streaming.api.datastream.*;
+import org.apache.flink.streaming.api.datastream.ConnectedStreams;
+import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.datastream.DataStreamSource;
+import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.util.Collector;
 
 import java.util.ArrayList;
@@ -27,14 +29,42 @@ public class CalculateStreamingJob {
 
 	public static void main(String[] args) throws Exception {
 		// set up the streaming execution environment
-		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-		testWordCount(env);
-		env.execute("execute");
 
+		testWordCount_02();
 	}
 
 
-	public static void testWordCount(StreamExecutionEnvironment env){
+	/**
+	 * 批处理wordCount
+	 * @throws Exception
+	 */
+	public static void testWordCount_02() throws Exception{
+		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+		String path = "E:\\code\\xc_sale\\src\\main\\java\\com\\daling\\sale\\controller\\BenefitController.java";
+		env.readTextFile(path).flatMap(new FlatMapFunction<String, Tuple2<String, Integer>>() {
+			@Override
+			public void flatMap(String value, Collector<Tuple2<String, Integer>> collector) throws Exception {
+				for (String word : value.split(" ")) {
+					collector.collect(new Tuple2(word, 1));
+				}
+			}
+		}).groupBy(0).reduce(new ReduceFunction<Tuple2<String, Integer>>() {
+			@Override
+			public Tuple2 reduce(Tuple2 t1, Tuple2 t2) throws Exception {
+				Tuple2 t = new Tuple2();
+				t.setField(t1.getField(0), 0);
+				t.setField((Integer) t1.getField(1) + (Integer) t2.getField(1), 1);
+				return t;
+			}
+		}).setParallelism(8).writeAsText("F:\\a");
+		env.execute();
+	}
+
+	/**
+	 *	流处理wordCount
+	 * @param env
+	 */
+	public static void testWordCount_01(StreamExecutionEnvironment env){
 		DataStreamSource<String> ds = env.readTextFile("F:\\a.java");
 		ds.flatMap(new FlatMapFunction<String,WordCount>() {
 			@Override
