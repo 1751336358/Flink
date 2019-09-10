@@ -17,6 +17,7 @@ import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.util.Collector;
+import pojo.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,11 +29,11 @@ public class CalculateStreamingJob {
 
 
 	public static void main(String[] args) throws Exception {
-		// set up the streaming execution environment
+		/*ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 
+		env.execute();*/
 		testWordCount_02();
 	}
-
 
 	/**
 	 * 批处理wordCount
@@ -40,7 +41,7 @@ public class CalculateStreamingJob {
 	 */
 	public static void testWordCount_02() throws Exception{
 		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
-		String path = "E:\\code\\xc_sale\\src\\main\\java\\com\\daling\\sale\\controller\\BenefitController.java";
+		String path = "/flink/input/a.log";
 		env.readTextFile(path).flatMap(new FlatMapFunction<String, Tuple2<String, Integer>>() {
 			@Override
 			public void flatMap(String value, Collector<Tuple2<String, Integer>> collector) throws Exception {
@@ -56,7 +57,7 @@ public class CalculateStreamingJob {
 				t.setField((Integer) t1.getField(1) + (Integer) t2.getField(1), 1);
 				return t;
 			}
-		}).setParallelism(8).writeAsText("F:\\a");
+		}).setParallelism(8).writeAsText("/flink/output");
 		env.execute();
 	}
 
@@ -218,41 +219,5 @@ class WordCount{
 	@Override
 	public String toString() {
 		return word+":"+count;
-	}
-}
-class User{
-	private Integer id;
-	private String userName;
-
-	public User(){
-
-	}
-	public User(Integer id, String userName) {
-		this.id = id;
-		this.userName = userName;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	@Override
-	public String toString() {
-		return "User{" +
-				"id=" + id +
-				", userName='" + userName + '\'' +
-				'}';
 	}
 }
