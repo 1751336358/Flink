@@ -65,6 +65,20 @@ under the License.
 			<version>${flink.version}</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!--添加对table api的依赖-->
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-table-planner_${scala.binary.version}</artifactId>
+			<version>1.8.0</version>
+		</dependency>
+		<!--根据目标编程语言，需要添加Java或Scala API-->
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-table-api-java-bridge_${scala.binary.version}</artifactId>
+			<version>1.8.0</version>
+		</dependency>
+		<!--表生态系统的一部分是在Scala中实现的。因此，请确保为批处理和流应用程序添加以下依赖项-->
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
@@ -73,11 +87,9 @@ under the License.
 		</dependency>
 		<dependency>
 			<groupId>org.apache.flink</groupId>
-			<artifactId>flink-table_2.11</artifactId>
-			<version>1.6.1</version>
-			<scope>provided</scope>
+			<artifactId>flink-streaming-scala_${scala.binary.version}</artifactId>
+			<version>${flink.version}</version>
 		</dependency>
-
 		<!-- Add connector dependencies here. They must be in the default scope (compile). -->
 
 		<!-- Example:
