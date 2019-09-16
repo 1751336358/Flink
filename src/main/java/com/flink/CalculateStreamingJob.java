@@ -29,10 +29,10 @@ public class CalculateStreamingJob {
 
 
 	public static void main(String[] args) throws Exception {
-		/*ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+		StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+		testMap(env);
+		env.execute();
 
-		env.execute();*/
-		testWordCount_02();
 	}
 
 	/**

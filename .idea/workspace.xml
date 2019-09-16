@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47e5df6f-733a-4ab0-b0fe-4c4506c78828" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/flink/TableJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flink/TableJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/WordCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/flink/WordCount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/BatchJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/CalculateStreamingJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/flink/WordCount.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,19 +29,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataSetJob.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataSetJob.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
+            <state relative-caret-position="380">
               <caret line="27" column="101" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
               <folding>
                 <element signature="method#union#0;class#DataSetJob#0" />
                 <element signature="method#cross#0;class#DataSetJob#0" />
-                <element signature="method#leouterJoin#0;class#DataSetJob#0" />
                 <element signature="method#join#0;class#DataSetJob#0" />
                 <element signature="method#distinct#0;class#DataSetJob#0" />
                 <element signature="method#getExecutionEnvironment#0;class#DataSetJob#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalculateStreamingJob.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -75,9 +83,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/flink/TimeWindowStreamingJob.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pojo/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flink/TableJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flink/TableJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java" />
       </list>
     </option>
   </component>
@@ -127,7 +135,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-1928" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -179,23 +187,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="flink" type="462c0819:PsiDirectoryNode" />
-              <item name="CalculateStreamingJob.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="firstFlink" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firstFlink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,7 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DataSetJob">
+  <component name="RunManager" selected="Application.CalculateStreamingJob">
     <configuration name="BatchJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.flink.BatchJob" />
       <module name="firstFlink" />
@@ -331,8 +330,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DataSetJob" />
         <item itemvalue="Application.CalculateStreamingJob" />
+        <item itemvalue="Application.DataSetJob" />
         <item itemvalue="Application.TimeWindowStreamingJob" />
         <item itemvalue="Application.BatchJob" />
         <item itemvalue="Application.SourceSinkStreamingJob" />
@@ -366,11 +365,14 @@
       <workItem from="1568100913467" duration="6172000" />
       <workItem from="1568120389407" duration="959000" />
       <workItem from="1568515496595" duration="5658000" />
+      <workItem from="1568534134541" duration="111000" />
+      <workItem from="1568596204603" duration="610000" />
+      <workItem from="1568627093217" duration="421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53947000" />
+    <option name="totallyTimeSpent" value="55089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -378,28 +380,28 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32922733" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.22761194" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5599104" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122068234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39641657" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39641657" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.30876216" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -418,6 +420,68 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="27" column="101" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
+          <folding>
+            <element signature="method#union#0;class#DataSetJob#0" />
+            <element signature="method#cross#0;class#DataSetJob#0" />
+            <element signature="method#join#0;class#DataSetJob#0" />
+            <element signature="method#distinct#0;class#DataSetJob#0" />
+            <element signature="method#getExecutionEnvironment#0;class#DataSetJob#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TableJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="101" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
+          <folding>
+            <element signature="method#union#0;class#DataSetJob#0" />
+            <element signature="method#cross#0;class#DataSetJob#0" />
+            <element signature="method#join#0;class#DataSetJob#0" />
+            <element signature="method#distinct#0;class#DataSetJob#0" />
+            <element signature="method#getExecutionEnvironment#0;class#DataSetJob#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TableJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="101" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
+          <folding>
+            <element signature="method#union#0;class#DataSetJob#0" />
+            <element signature="method#cross#0;class#DataSetJob#0" />
+            <element signature="method#join#0;class#DataSetJob#0" />
+            <element signature="method#distinct#0;class#DataSetJob#0" />
+            <element signature="method#getExecutionEnvironment#0;class#DataSetJob#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -557,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TableJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="4" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-java/1.7.0/flink-java-1.7.0.jar!/org/apache/flink/api/java/operators/Operator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -585,25 +642,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TableJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        <state relative-caret-position="160">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
+        <state relative-caret-position="380">
           <caret line="27" column="101" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
           <folding>
             <element signature="method#union#0;class#DataSetJob#0" />
             <element signature="method#cross#0;class#DataSetJob#0" />
-            <element signature="method#leouterJoin#0;class#DataSetJob#0" />
             <element signature="method#join#0;class#DataSetJob#0" />
             <element signature="method#distinct#0;class#DataSetJob#0" />
             <element signature="method#getExecutionEnvironment#0;class#DataSetJob#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
         </state>
       </provider>
     </entry>
