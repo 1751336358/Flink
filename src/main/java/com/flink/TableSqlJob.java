@@ -23,7 +23,6 @@ import org.apache.flink.api.java.operators.DataSource;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
-import org.apache.flink.table.api.TableEnvironment;
 import org.apache.flink.table.api.java.BatchTableEnvironment;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
 import pojo.User;
@@ -34,7 +33,28 @@ import java.util.List;
 public class TableSqlJob {
 
 	public static void main(String[] args) throws Exception {
-		testStreamTable();
+		testStreamToTable();
+	}
+
+
+
+	//测试Stream转Table
+	public static void testStreamToTable() throws Exception{
+		StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+		StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
+		tableEnv.registerDataStream("user",env.fromCollection(getUserList()));	//注册一张User表
+		Table table = tableEnv.scan("user").select("id").where("id%2===0");	//select id 与Integer.class映射
+		tableEnv.toAppendStream(table,Integer.class).print();
+		env.execute();
+	}
+
+	//测试DataStream转Table
+	public static void testFromDataStreamFunction() throws Exception{
+		StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+		StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
+		Table table = tableEnv.fromDataStream(env.fromCollection(getUserList())).select("*").where("id % 2 === 1");		//select * 与User.class映射
+		tableEnv.toAppendStream(table,User.class).print();
+		env.execute();
 	}
 
 	//批处理
