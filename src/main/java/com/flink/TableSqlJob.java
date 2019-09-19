@@ -1,27 +1,7 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.flink;
 
-import javafx.scene.control.Tab;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
-import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
@@ -36,23 +16,32 @@ import java.util.List;
 public class TableSqlJob {
 
     public static void main(String[] args) throws Exception {
-
+        testJoin();
     }
 
+    public static void testJoin() throws Exception{
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        StreamTableEnvironment tabEnv = StreamTableEnvironment.create(env);
+        Table user = tabEnv.fromDataStream(env.fromCollection(getUserList()), "id,userName");
+        Table stu = tabEnv.fromDataStream(env.fromCollection(Student.getStudent()),"sid,level");
+        Table leftOuterJoin = user.leftOuterJoin(stu).where("id=sid").select("userName");
+        tabEnv.toAppendStream(leftOuterJoin,String.class).print();
+        env.execute();
+    }
 
-    /*public static void test() throws Exception {
+    //测试简单的join操作
+    public static void join() throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
-        tableEnv.registerDataStream("user", env.fromCollection(getUserList()),"id as uid");
-        tableEnv.registerDataStream("student",env.fromCollection(Student.getStudent()),"id as sid");
+        Table user = tableEnv.fromDataStream(env.fromCollection(getUserList()),"id,userName");
+        Table stu = tableEnv.fromDataStream(env.fromCollection(Student.getStudent()),"sid,level");
+        //第一和where，指定关联条件，第二个where，数据过滤
+        //select * from user join stu on id=sid where sid%2=0 and level=760
+        Table join = user.join(stu).where("id=sid").select("sid,level").where("sid%2=1&&level=760");
 
-        Table user = tableEnv.scan("user");
-        Table student = tableEnv.scan("student");
-
-        Table table = user.select("uid,sid").leftOuterJoin(student).where("uid==sid");
-        tableEnv.toAppendStream(table, Tuple2.class).print();
+        tableEnv.toAppendStream(join,Student.class).print();
         env.execute();
-    }*/
+    }
 
     //测试Stream转Table
     public static void testStreamToTable() throws Exception {

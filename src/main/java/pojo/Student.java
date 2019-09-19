@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
-    private Integer id;
+    private Integer sid;
     private Integer level;
 
     public Student(){
 
     }
 
-    public Student(Integer id, Integer level) {
-        this.id = id;
+    public Student(Integer sid, Integer level) {
+        this.sid = sid;
         this.level = level;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getSid() {
+        return sid;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setSid(Integer sid) {
+        this.sid = sid;
     }
 
     public Integer getLevel() {
@@ -35,15 +35,15 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
+                "sid=" + sid +
                 ", level=" + level +
                 '}';
     }
 
     public static List<Student> getStudent(){
         List<Student> list = new ArrayList<>();
-        for(int i=0;i<100;i++){
-            list.add(new Student(i+1,i*10));
+        for(int i=25;i<=50;i++){
+            list.add(new Student(i,i*10));
         }
         return list;
     }
