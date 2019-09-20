@@ -16,16 +16,17 @@ import java.util.List;
 public class TableSqlJob {
 
     public static void main(String[] args) throws Exception {
-        testJoin();
+        testTableSQL_01();
     }
 
-    public static void testJoin() throws Exception{
+    public static void testTableSQL_01() throws Exception{
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tabEnv = StreamTableEnvironment.create(env);
-        Table user = tabEnv.fromDataStream(env.fromCollection(getUserList()), "id,userName");
-        Table stu = tabEnv.fromDataStream(env.fromCollection(Student.getStudent()),"sid,level");
-        Table leftOuterJoin = user.leftOuterJoin(stu).where("id=sid").select("userName");
-        tabEnv.toAppendStream(leftOuterJoin,String.class).print();
+
+        tabEnv.registerDataStream("user",env.fromCollection(getUserList()),"id,userName");
+        //表必须用` `包住
+        Table tab = tabEnv.sqlQuery("SELECT id,userName FROM `user` where id<50");
+        tabEnv.toAppendStream(tab,User.class).print();
         env.execute();
     }
 
