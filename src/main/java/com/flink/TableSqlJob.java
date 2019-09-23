@@ -2,13 +2,16 @@ package com.flink;
 
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
+import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.java.BatchTableEnvironment;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
+import pojo.KV;
 import pojo.Student;
 import pojo.User;
+import pojo.UserStu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +19,22 @@ import java.util.List;
 public class TableSqlJob {
 
     public static void main(String[] args) throws Exception {
-        testTableSQL_01();
+
+    }
+
+
+    //rightJoin
+    public static void tsetRightJoin() throws Exception{
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        StreamTableEnvironment tabEnv = StreamTableEnvironment.create(env);
+
+        tabEnv.registerDataStream("user",env.fromCollection(getUserList()));
+        tabEnv.registerDataStream("stu",env.fromCollection(Student.getStudent()));
+        //select * from user right join stu on id=sid where id<35  以右表为基准
+        Table table = tabEnv.sqlQuery("select * from `user` right join  `stu` on id=sid where id<35");
+        tabEnv.toRetractStream(table,UserStu.class).print();
+        env.execute();
+
     }
 
     public static void testTableSQL_01() throws Exception{
