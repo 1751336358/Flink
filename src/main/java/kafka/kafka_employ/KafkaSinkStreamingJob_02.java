@@ -1,4 +1,4 @@
-package com.flink;
+package kafka.kafka_employ;
 
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.configuration.Configuration;

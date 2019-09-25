@@ -1,4 +1,4 @@
-package kafka;
+package kafka.kafka_employ;
 
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -12,7 +12,7 @@ import java.util.Properties;
  * Hello world!
  *
  */
-public class Consumers {
+public class Consumer {
     public static void main( String[] args ) {
 
         String topic = "test";
