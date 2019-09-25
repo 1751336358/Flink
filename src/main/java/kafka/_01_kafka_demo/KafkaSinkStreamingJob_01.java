@@ -15,6 +15,8 @@ import java.util.Properties;
 /**
  * 自定义DataSource 和DataSink
  * 从kafka读取数据，写入mysql
+ * 压力造数据命令
+ * ./kafka-producer-perf-test.sh  --topic test --num-records 100000000 --record-size 687  --producer-props   bootstrap.servers=192.168.234.130:9092  batch.size=10000   --throughput 30000
  */
 public class KafkaSinkStreamingJob_01 {
 
@@ -26,6 +28,10 @@ public class KafkaSinkStreamingJob_01 {
 
 	}
 
+	/**
+	 * 从lafka读取数据
+	 * @param env
+	 */
 	public static void readFromKafka(StreamExecutionEnvironment env){
 		Properties props = new Properties();
 		props.put("bootstrap.servers", "192.168.234.130:9092");

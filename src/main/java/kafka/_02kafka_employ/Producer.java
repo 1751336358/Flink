@@ -1,10 +1,11 @@
-package kafka._01_kafka_demo;
+package kafka._02kafka_employ;
 
 
+import com.alibaba.fastjson.JSON;
 import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
+import pojo.Employ;
 
 import java.util.Properties;
 import java.util.concurrent.Future;
@@ -14,7 +15,7 @@ import java.util.concurrent.Future;
  *  ./kafka-producer-perf-test.sh  --topic test_kafka_perf1 --num-records 100000000 --record-size 687  --producer-props   bootstrap.servers=10.240.1.134:9092,10.240.1.143:9092,10.240.1.146:9092  batch.size=10000   --throughput 30000
  *  造数据脚本
  */
-public class Producers {
+public class Producer {
     public static void main( String[] args ) throws Exception{
 
         Properties props = new Properties();
@@ -28,28 +29,17 @@ public class Producers {
                 "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer",
                 "org.apache.kafka.common.serialization.StringSerializer");
-        Producer<String, String> producer = new KafkaProducer<String, String>(props);
-        String topicName = "test";
-        for(int i = 0; i < 30; i++){
+        org.apache.kafka.clients.producer.Producer<String, String> producer = new KafkaProducer<String, String>(props);
+        String topicName = "employ_topic";
+        Long id = 1L;
+        for(int i = 1; i <= 100000; i++){
+            Employ employ = new Employ(id++,"employ"+i,i);
             Future<RecordMetadata> send = producer.send(new ProducerRecord<String, String>(topicName,
-                    Integer.toString(i), Integer.toString(i)));
+                    Integer.toString(i), JSON.toJSONString(employ)));
             System.out.println("offset="+send.get().offset()+",partition="+send.get().partition()+",topic="+send.get().topic());
+            Thread.sleep(100);
         }
         producer.close();
-        /*for(int i=0;i<9;i++){
-            producer.send(new ProducerRecord<String, String>(topicName,
-                    Integer.toString(i), Integer.toString(i)), new Callback() {
-                public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-                    if(e == null){
-                        System.out.println("消息发送成功");
-                    }else if(recordMetadata == null){
-                        e.printStackTrace();
-                    }else{
-                        System.out.println("未知异常");
-                    }
-                }
-            });
-        }*/
         producer.close();
     }
 }
