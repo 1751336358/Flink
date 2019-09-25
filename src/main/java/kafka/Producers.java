@@ -11,7 +11,8 @@ import java.util.concurrent.Future;
 
 /**
  * Hello world!
- *
+ *  ./kafka-producer-perf-test.sh  --topic test_kafka_perf1 --num-records 100000000 --record-size 687  --producer-props   bootstrap.servers=10.240.1.134:9092,10.240.1.143:9092,10.240.1.146:9092  batch.size=10000   --throughput 30000
+ *  造数据脚本
  */
 public class Producers {
     public static void main( String[] args ) throws Exception{
