@@ -27,9 +27,10 @@ public class TableSqlJob {
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         BatchTableEnvironment tabEnv = TableEnvironment.getTableEnvironment(env);
         DataSource<WC> ds = env.fromCollection(WC.getWC());
-        tabEnv.registerDataSet("wc",ds);
-        Table wc1 = tabEnv.scan("wc");
-        Table wc2 = tabEnv.scan("wc");
+        tabEnv.registerDataSet("wc1",ds);
+        tabEnv.registerDataSet("wc2",ds);
+        Table wc1 = tabEnv.scan("wc1");
+        Table wc2 = tabEnv.scan("wc2");
         Table tab = wc1.unionAll(wc2).select("*");
         tabEnv.toDataSet(tab,WC.class).print();
     }

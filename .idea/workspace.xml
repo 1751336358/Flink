@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47e5df6f-733a-4ab0-b0fe-4c4506c78828" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/WC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/flink/TableSqlJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flink/TableSqlJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/KV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pojo/KV.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="TableSqlJob.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TableSqlJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+            <state relative-caret-position="300">
+              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -42,6 +38,8 @@
       <find>join</find>
       <find>left</find>
       <find>toR</find>
+      <find>99</find>
+      <find>wc_99</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -367,12 +365,12 @@
       <workItem from="1569227490267" duration="1021000" />
       <workItem from="1569229227609" duration="5159000" />
       <workItem from="1569374096288" duration="610000" />
-      <workItem from="1569382628765" duration="10978000" />
+      <workItem from="1569382628765" duration="11267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81352000" />
+    <option name="totallyTimeSpent" value="81641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -392,14 +390,14 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.6069429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37849945" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6864502" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -735,18 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/WC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-core/1.7.0/flink-core-1.7.0.jar!/org/apache/flink/types/Row.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -782,10 +768,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/WC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TableSqlJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        <state relative-caret-position="300">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
         </state>
       </provider>
     </entry>
