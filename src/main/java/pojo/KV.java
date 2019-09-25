@@ -5,6 +5,8 @@ public class KV {
     private Integer id;
     private Integer count;
 
+    private String  userName;
+
     public KV() {
     }
 
@@ -27,6 +29,14 @@ public class KV {
 
     public void setCount(Integer count) {
         this.count = count;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     @Override

@@ -2,16 +2,17 @@ package com.flink;
 
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
-import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
+import org.apache.flink.table.api.TableEnvironment;
 import org.apache.flink.table.api.java.BatchTableEnvironment;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
-import pojo.KV;
+import org.apache.flink.types.Row;
 import pojo.Student;
 import pojo.User;
 import pojo.UserStu;
+import pojo.WC;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,12 +20,22 @@ import java.util.List;
 public class TableSqlJob {
 
     public static void main(String[] args) throws Exception {
-
+        testUnionAll();
     }
 
+    public static void testUnionAll() throws Exception{
+        ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+        BatchTableEnvironment tabEnv = TableEnvironment.getTableEnvironment(env);
+        DataSource<WC> ds = env.fromCollection(WC.getWC());
+        tabEnv.registerDataSet("wc",ds);
+        Table wc1 = tabEnv.scan("wc");
+        Table wc2 = tabEnv.scan("wc");
+        Table tab = wc1.unionAll(wc2).select("*");
+        tabEnv.toDataSet(tab,WC.class).print();
+    }
 
     //rightJoin
-    public static void tsetRightJoin() throws Exception{
+    public static void testRightJoin() throws Exception{
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tabEnv = StreamTableEnvironment.create(env);
 
@@ -105,8 +116,10 @@ public class TableSqlJob {
 
     public static List<User> getUserList() {
         List<User> list = new ArrayList();
-        for (int i = 0; i < 100; i++) {
-            list.add(new User(i, "name" + i));
+        for (int i = 1; i <= 30; i++) {
+            list.add(new User(1, "name" + i));
+            list.add(new User(1, "name" + i));
+            list.add(new User(1, "name" + i));
         }
         return list;
     }
