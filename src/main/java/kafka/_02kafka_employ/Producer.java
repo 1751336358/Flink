@@ -35,9 +35,9 @@ public class Producer {
         for(int i = 1; i <= 100000; i++){
             Employ employ = new Employ(id++,"employ"+i,i);
             Future<RecordMetadata> send = producer.send(new ProducerRecord<String, String>(topicName,
-                    Integer.toString(i), JSON.toJSONString(employ)));
+                    Integer.toString(i), JSON.toJSONString(employ)));   //写入String类型数据
             System.out.println("offset="+send.get().offset()+",partition="+send.get().partition()+",topic="+send.get().topic());
-            Thread.sleep(100);
+         //   Thread.sleep(100);
         }
         producer.close();
         producer.close();
