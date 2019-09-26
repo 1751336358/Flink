@@ -1,5 +1,7 @@
 package pojo;
 
+import com.alibaba.fastjson.JSON;
+
 public class Employ {
     private Long id;
     private String name;
@@ -39,10 +41,6 @@ public class Employ {
 
     @Override
     public String toString() {
-        return "Employ{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", score=" + score +
-                '}';
+        return JSON.toJSONString(this);
     }
 }

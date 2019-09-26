@@ -8,6 +8,7 @@ import org.apache.kafka.clients.producer.RecordMetadata;
 import pojo.Employ;
 
 import java.util.Properties;
+import java.util.Random;
 import java.util.concurrent.Future;
 
 /**
@@ -33,13 +34,19 @@ public class Producer {
         String topicName = "employ_topic";
         Long id = 1L;
         for(int i = 1; i <= 100000; i++){
-            Employ employ = new Employ(id++,"employ"+i,i);
+            Employ employ = new Employ(id++,createAndGetEmployNameRandom(),new Random().nextInt(100));
             Future<RecordMetadata> send = producer.send(new ProducerRecord<String, String>(topicName,
                     Integer.toString(i), JSON.toJSONString(employ)));   //写入String类型数据
             System.out.println("offset="+send.get().offset()+",partition="+send.get().partition()+",topic="+send.get().topic());
-         //   Thread.sleep(100);
+            Thread.sleep(100);
         }
         producer.close();
-        producer.close();
+    }
+
+    //随机生成employ name
+    private static String createAndGetEmployNameRandom(){
+        String[] names = {"aaa","bbb","ccc","ddd","eee","fff","ggg","hhh","iii","jjj","kkk","mmm","nnn","ooo","ppp","qqq","rrr","sss","ttt","uuu","vvv","www","xxx","yyy","zzz"};
+        int len = names.length;
+        return names[new Random().nextInt(len-1)];
     }
 }
