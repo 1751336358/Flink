@@ -14,7 +14,7 @@ import java.util.Properties;
 /**
  * 从kafka读取数据,测试各种算子
  */
-public class KafkaSinkStreamingJob_02 {
+public class KafkaStreamJob {
 
 
 	public static void main(String[] args) throws Exception {
