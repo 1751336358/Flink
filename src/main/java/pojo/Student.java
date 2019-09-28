@@ -1,9 +1,11 @@
 package pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student {
+public class Student implements Serializable {
+
     private Integer sid;
     private Integer level;
 
@@ -42,7 +44,7 @@ public class Student {
 
     public static List<Student> getStudent(){
         List<Student> list = new ArrayList<>();
-        for(int i=25;i<=50;i++){
+        for(int i=1;i<=100;i++){
             list.add(new Student(i,i*10));
         }
         return list;

@@ -2,16 +2,56 @@ package com.flink;
 
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.functions.AssignerWithPeriodicWatermarks;
+import org.apache.flink.streaming.api.functions.source.SourceFunction;
+import org.apache.flink.streaming.api.watermark.Watermark;
 import org.apache.flink.streaming.api.windowing.time.Time;
+import pojo.Student;
 
+import javax.annotation.Nullable;
+import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class TimeWindowStreamingJob {
+public class TimeAndWatermarksStreamingJob {
     public static void main(String[] args) throws Exception {
 
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        testTimeWindow2(env);
+        watermarks(env);
         env.execute("execute");
+    }
+
+    /**
+     * 设置时间戳和水位
+     * @param env
+     * @throws Exception
+     */
+    public static void watermarks(StreamExecutionEnvironment env)throws Exception{
+        List<Student> student = Student.getStudent();
+        env.addSource(new SourceFunction<Student>() {
+            @Override
+            public void run(SourceContext<Student> ctx) throws Exception {
+                for(Student stu:student){
+                    ctx.collectWithTimestamp(stu,System.currentTimeMillis());
+                    ctx.emitWatermark(new Watermark(1L));
+                }
+            }
+
+            @Override
+            public void cancel() {
+
+            }
+        }).assignTimestampsAndWatermarks(new AssignerWithPeriodicWatermarks<Student>() {
+            @Nullable
+            @Override
+            public Watermark getCurrentWatermark() {
+                return null;
+            }
+
+            @Override
+            public long extractTimestamp(Student student, long l) {
+                return 0;
+            }
+        });
     }
 
     /**
