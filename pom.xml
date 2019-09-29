@@ -108,6 +108,12 @@ under the License.
 		    <artifactId>flink-connector-kafka-0.11_${scala.binary.version}</artifactId>
 		    <version>${flink.version}</version>
 		</dependency>
+		<!--flink rabbitmq connector-->
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-connector-rabbitmq_${scala.binary.version}</artifactId>
+			<version>${flink.version}</version>
+		</dependency>
 		<!-- Add connector dependencies here. They must be in the default scope (compile). -->
 
 		<!-- Example:
