@@ -20,7 +20,7 @@ public class Producer {
     public static void main( String[] args ) throws Exception{
 
         Properties props = new Properties();
-        props.put("bootstrap.servers","192.168.234.130:9092");
+        props.put("bootstrap.servers","192.168.234.129:9092");
         props.put("acks","-1");
         props.put("retries",3);
         props.put("batch.size",16384);
@@ -38,7 +38,7 @@ public class Producer {
             Future<RecordMetadata> send = producer.send(new ProducerRecord<String, String>(topicName,
                     Integer.toString(i), JSON.toJSONString(employ)));   //写入String类型数据
             System.out.println("offset="+send.get().offset()+",partition="+send.get().partition()+",topic="+send.get().topic());
-            Thread.sleep(100);
+    //        Thread.sleep(100);
         }
         producer.close();
     }
