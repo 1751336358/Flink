@@ -6,6 +6,7 @@ import org.apache.flink.streaming.api.functions.AssignerWithPeriodicWatermarks;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.api.watermark.Watermark;
 import org.apache.flink.streaming.api.windowing.time.Time;
+import pojo.MyEvent;
 import pojo.Student;
 
 import javax.annotation.Nullable;
@@ -16,43 +17,10 @@ public class TimeAndWatermarksStreamingJob {
     public static void main(String[] args) throws Exception {
 
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        watermarks(env);
         env.execute("execute");
     }
 
-    /**
-     * 设置时间戳和水位
-     * @param env
-     * @throws Exception
-     */
-    public static void watermarks(StreamExecutionEnvironment env)throws Exception{
-        List<Student> student = Student.getStudent();
-        env.addSource(new SourceFunction<Student>() {
-            @Override
-            public void run(SourceContext<Student> ctx) throws Exception {
-                for(Student stu:student){
-                    ctx.collectWithTimestamp(stu,System.currentTimeMillis());
-                    ctx.emitWatermark(new Watermark(1L));
-                }
-            }
 
-            @Override
-            public void cancel() {
-
-            }
-        }).assignTimestampsAndWatermarks(new AssignerWithPeriodicWatermarks<Student>() {
-            @Nullable
-            @Override
-            public Watermark getCurrentWatermark() {
-                return null;
-            }
-
-            @Override
-            public long extractTimestamp(Student student, long l) {
-                return 0;
-            }
-        });
-    }
 
     /**
      * 测试滑动窗口

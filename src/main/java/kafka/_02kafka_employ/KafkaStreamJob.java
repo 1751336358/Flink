@@ -8,6 +8,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer011;
 import pojo.Employ;
+import utils.KafkaUtils;
 
 import java.util.Properties;
 
@@ -25,7 +26,7 @@ public class KafkaStreamJob {
 	//测试滑动窗口，根据keyBy(name)每5s统计前10s的sum(score)
 	public static void testWindow_04() throws Exception{
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), getKfkPreperties());
+		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), KafkaUtils.getKfkPreperties());
 		flinkKfkConsumer.setStartFromLatest();
 		DataStreamSource<String> ds = env.addSource(flinkKfkConsumer).setParallelism(1);
 		ds.map(new MapFunction<String, Employ>() {
@@ -41,7 +42,7 @@ public class KafkaStreamJob {
 	public static void testWindow_03() throws Exception{
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 		//读取String类型并转化为Object，测试各种算子
-		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), getKfkPreperties());
+		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), KafkaUtils.getKfkPreperties());
 		flinkKfkConsumer.setStartFromLatest();
 		DataStreamSource<String> ds = env.addSource(flinkKfkConsumer).setParallelism(1);
 		ds.map(new MapFunction<String, Employ>() {
@@ -57,7 +58,7 @@ public class KafkaStreamJob {
 	public static void testWindow_02() throws Exception{
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 		//读取String类型并转化为Object，测试各种算子
-		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), getKfkPreperties());
+		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), KafkaUtils.getKfkPreperties());
 		flinkKfkConsumer.setStartFromEarliest();
 		DataStreamSource<String> ds = env.addSource(flinkKfkConsumer).setParallelism(1);
 		ds.map(new MapFunction<String, Employ>() {
@@ -73,7 +74,7 @@ public class KafkaStreamJob {
 	public static void testWindow_01() throws Exception{
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 		//读取String类型并转化为Object，测试各种算子
-		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), getKfkPreperties());
+		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), KafkaUtils.getKfkPreperties());
 		flinkKfkConsumer.setStartFromEarliest();
 		DataStreamSource<String> ds = env.addSource(flinkKfkConsumer).setParallelism(1);
 		ds.map(new MapFunction<String, Employ>() {
@@ -83,17 +84,6 @@ public class KafkaStreamJob {
 			}
 		}).timeWindowAll(Time.seconds(5L)).sum("score").print();
 		env.execute("execute");
-	}
-
-	private static Properties getKfkPreperties(){
-		Properties props = new Properties();
-		props.put("bootstrap.servers", "192.168.234.130:9092");
-		props.put("zookeeper.connect", "192.168.234.130:2181");
-		props.put("group.id", "metric-group");
-		props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-		props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-		props.put("auto.offset.reset", "latest");	//earliest,latest,和none
-		return props;
 	}
 
 }
