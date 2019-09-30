@@ -1,9 +1,16 @@
 package com.flink;
 
+import com.alibaba.fastjson.JSON;
+import org.apache.flink.api.common.functions.MapFunction;
+import org.apache.flink.api.common.serialization.DeserializationSchema;
+import org.apache.flink.api.common.serialization.SimpleStringSchema;
+import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
+import org.apache.flink.api.java.typeutils.PojoTypeInfo;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer011;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.TableEnvironment;
 import org.apache.flink.table.api.java.BatchTableEnvironment;
@@ -11,14 +18,46 @@ import org.apache.flink.table.api.java.StreamTableEnvironment;
 import org.apache.flink.types.Row;
 import pojo.*;
 import pojo.Student;
+import utils.KafkaUtils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TableSqlJob {
 
     public static void main(String[] args) throws Exception {
-        filter();
+        testKafkaAndSql();
+    }
+
+    //从kafka读取数据，sql查数据
+    public static void testKafkaAndSql() throws Exception{
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        DataStreamSource<Employ> ds = env.addSource(new FlinkKafkaConsumer011<Employ>("employ_topic", new DeserializationSchema<Employ>() {
+            @Override
+            public Employ deserialize(byte[] bytes) throws IOException {
+                String s = new String(bytes);
+                return JSON.parseObject(s,Employ.class);
+            }
+
+            @Override
+            public boolean isEndOfStream(Employ employ) {
+                return false;
+            }
+
+            @Override
+            public TypeInformation<Employ> getProducedType() {
+                return PojoTypeInfo.of(Employ.class);
+            }
+        }, KafkaUtils.getKfkPreperties()));
+
+        StreamTableEnvironment tabEnv = StreamTableEnvironment.create(env);
+        Table table = tabEnv.fromDataStream(ds);
+        tabEnv.registerTable("employ",table);
+        Table table1 = tabEnv.sqlQuery("select * from `employ` where score>70");
+        table1.printSchema();
+        tabEnv.toAppendStream(table1,Employ.class).print();
+        env.execute();
     }
 
     //测试filter
