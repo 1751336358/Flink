@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fddbac66-91f6-49ad-b464-21da6883ffbc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flink/TriggerStreamingJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kafka/_06trigget/Producer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kafka/_06trigget/TriggerStreamingJob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/_01_kafka_demo/KafkaSinkStreamingJob_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/_01_kafka_demo/KafkaSinkStreamingJob_01.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/_01_kafka_demo/Sink2MySQL_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/_01_kafka_demo/Sink2MySQL_01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,20 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Producer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06trigget/Producer.java">
+      <file leaf-file-name="DataSetJob.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TriggerStreamingJob.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06trigget/TriggerStreamingJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="33" column="105" lean-forward="true" selection-start-line="33" selection-start-column="105" selection-end-line="33" selection-end-column="105" />
+            <state relative-caret-position="42">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -78,6 +65,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/flink/TriggerStreamingJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/kafka/_06trigget/Producer.java" />
         <option value="$PROJECT_DIR$/src/main/java/kafka/_06trigget/TriggerStreamingJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java" />
       </list>
     </option>
   </component>
@@ -115,8 +103,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -149,30 +135,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="firstFlink" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka" type="462c0819:PsiDirectoryNode" />
-              <item name="_02kafka_employ" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="firstFlink" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Flink" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka" type="462c0819:PsiDirectoryNode" />
-              <item name="_06trigget" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,7 +175,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TriggerStreamingJob">
+  <component name="RunManager" selected="Application.DataSetJob">
+    <configuration name="DataSetJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.DataSetJob" />
+      <module name="firstFlink" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flink.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="KafkaStreamJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kafka._02kafka_employ.KafkaStreamJob" />
       <module name="firstFlink" />
@@ -246,17 +227,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="kafka._06trigget.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="WatermarksStreamingJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="kafka._04watermark.WatermarksStreamingJob" />
-      <module name="firstFlink" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kafka._04watermark.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -303,19 +273,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.WatermarksStreamingJob" />
       <item itemvalue="Application.KafkaStreamJob" />
       <item itemvalue="Application.Producer (1)" />
       <item itemvalue="Application.Producer (2)" />
       <item itemvalue="Application.TriggerStreamingJob" />
+      <item itemvalue="Application.DataSetJob" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DataSetJob" />
         <item itemvalue="Application.TriggerStreamingJob" />
         <item itemvalue="Application.Producer (2)" />
         <item itemvalue="Application.Producer (1)" />
         <item itemvalue="Application.KafkaStreamJob" />
-        <item itemvalue="Application.WatermarksStreamingJob" />
       </list>
     </recent_temporary>
   </component>
@@ -333,12 +303,13 @@
       <workItem from="1569664588517" duration="5000" />
       <workItem from="1569726200324" duration="793000" />
       <workItem from="1569727743117" duration="1372000" />
-      <workItem from="1569746439594" duration="15882000" />
+      <workItem from="1569746439594" duration="16857000" />
+      <workItem from="1569812054497" duration="1543000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25100000" />
+    <option name="totallyTimeSpent" value="27618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -353,25 +324,25 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.58342665" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25867862" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32922733" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1945629" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19669509" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.19932811" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.19932811" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +352,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06trigget/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.7.0/flink-streaming-java_2.11-1.7.0.jar!/org/apache/flink/streaming/api/windowing/triggers/EventTimeTrigger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06trigget/TriggerStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TimeAndWatermarksStreamingJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="860">
@@ -465,17 +457,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/WatermarksStreamingJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-          <folding>
-            <element signature="e#1544#1545#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/WatermarksStreamingJob.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/KafkaUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -501,13 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="65" column="78" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -522,59 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="190" column="5" lean-forward="true" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
-          <folding>
-            <element signature="e#4077#4271#0" />
-            <element signature="e#4277#4550#0" />
-            <element signature="e#4556#4919#0" />
-            <element signature="e#4925#6105#0" />
-            <element signature="e#6111#6544#0" />
-            <element signature="e#6751#6932#0" />
-            <element signature="e#6938#7457#0" />
-            <element signature="e#7463#7760#0" />
-            <element signature="e#7766#7784#0" />
-            <element signature="e#7789#7800#0" />
-            <element signature="e#7766#8175#0" />
-            <element signature="e#8181#8199#0" />
-            <element signature="e#8204#8215#0" />
-            <element signature="e#8181#8559#0" />
-            <element signature="e#8565#8965#0" />
-            <element signature="e#8971#9328#0" />
-            <element signature="e#9334#9521#0" />
-            <element signature="e#9527#9801#0" />
-            <element signature="e#9807#10105#0" />
-            <element signature="e#10111#10287#0" />
-            <element signature="e#10293#10494#0" />
-            <element signature="e#10500#10676#0" />
-            <element signature="e#10682#10945#0" />
-            <element signature="e#10951#10969#0" />
-            <element signature="e#10951#11367#0" />
-            <element signature="e#11373#11548#0" />
-            <element signature="e#11554#11716#0" />
-            <element signature="e#11722#11925#0" />
-            <element signature="e#11931#12128#0" />
-            <element signature="e#12134#12337#0" />
-            <element signature="e#12343#12540#0" />
-            <element signature="e#12546#12762#0" />
-            <element signature="e#12768#12984#0" />
-            <element signature="e#13247#13480#0" />
-            <element signature="e#13743#13976#0" />
-            <element signature="e#13982#14317#0" />
-            <element signature="e#14323#14637#0" />
-            <element signature="e#14643#15166#0" />
-            <element signature="e#15172#15190#0" />
-            <element signature="e#15195#15206#0" />
-            <element signature="e#15172#15753#0" />
-            <element signature="e#15759#16289#0" />
-            <element signature="e#16295#19229#0" />
-            <element signature="e#16761#17402#0" />
-            <element signature="e#17412#17589#0" />
-            <element signature="e#17599#17776#0" />
-            <element signature="e#17786#18305#0" />
-            <element signature="e#18315#19223#0" />
-            <element signature="e#19235#20561#0" />
-            <element signature="e#19420#19670#0" />
-            <element signature="e#19680#20555#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -620,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.7.0/flink-streaming-java_2.11-1.7.0.jar!/org/apache/flink/streaming/api/windowing/triggers/Trigger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.7.0/flink-streaming-java_2.11-1.7.0.jar!/org/apache/flink/streaming/api/windowing/windows/Window.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -641,21 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.7.0/flink-streaming-java_2.11-1.7.0.jar!/org/apache/flink/streaming/api/windowing/triggers/CountTrigger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="method#CountTrigger#0;class#CountTrigger#0" />
-            <element signature="e#1625#1626#0" expanded="true" />
-            <element signature="e#1670#1671#0" expanded="true" />
-            <element signature="class#Sum#0;class#CountTrigger#0" />
-            <element signature="method#Sum#0;class#Sum#0;class#CountTrigger#0" />
-            <element signature="method#reduce#0;class#Sum#0;class#CountTrigger#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_01_kafka_demo/KafkaSinkStreamingJob_01.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -663,13 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TriggerStreamingJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -684,9 +578,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.7.0/flink-streaming-java_2.11-1.7.0.jar!/org/apache/flink/streaming/api/windowing/triggers/EventTimeTrigger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.7.0/flink-streaming-java_2.11-1.7.0.jar!/org/apache/flink/streaming/api/windowing/triggers/CountTrigger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.7.0/flink-streaming-java_2.11-1.7.0.jar!/org/apache/flink/streaming/api/windowing/triggers/Trigger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06trigget/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="640">
           <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
         </state>
       </provider>
@@ -694,7 +609,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06trigget/TriggerStreamingJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="33" column="105" lean-forward="true" selection-start-line="33" selection-start-column="105" selection-end-line="33" selection-end-column="105" />
+          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/DataSetJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>

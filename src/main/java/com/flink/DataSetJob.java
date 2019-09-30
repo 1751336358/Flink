@@ -1,18 +1,35 @@
 package com.flink;
 
 import org.apache.flink.api.common.functions.CrossFunction;
+import org.apache.flink.api.common.functions.GroupReduceFunction;
 import org.apache.flink.api.common.functions.JoinFunction;
 import org.apache.flink.api.common.operators.Order;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
 import org.apache.flink.api.java.tuple.Tuple2;
+import org.apache.flink.api.java.tuple.Tuple3;
+import org.apache.flink.util.Collector;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class DataSetJob {
     public static void main(String[] args) throws Exception {
-        sort();
+    }
+
+
+
+    //先用_1分组，在用_0排序，如果有多个_0相同，则根据_2排序
+    public static void minBy() throws Exception{
+        List<Tuple3<Integer,String,Integer>> list = new ArrayList<>();
+        list.add(new Tuple3<>(1,"Hello",5));
+        list.add(new Tuple3<>(1,"Hello",4));
+        list.add(new Tuple3<>(2,"Hello",5));
+        list.add(new Tuple3<>(3,"World",7));
+        list.add(new Tuple3<>(4,"World",6));
+        ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+        env.fromCollection(list).groupBy(1).minBy(2,0).print();
     }
 
     public static void sort() throws Exception{
