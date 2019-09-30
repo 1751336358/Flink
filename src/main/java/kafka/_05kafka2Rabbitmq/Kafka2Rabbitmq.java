@@ -30,14 +30,15 @@ public class Kafka2Rabbitmq {
 	public static void rmq(StreamExecutionEnvironment env){
 		DataStreamSource<String> ds = env.addSource(new FlinkKafkaConsumer011<String>("test", new SimpleStringSchema(), KafkaUtils.getKfkPreperties())).setParallelism(1);
 			RMQConnectionConfig config = new RMQConnectionConfig.Builder()
-					.setHost("")
-					.setVirtualHost("")
+					.setHost("s-rabbitmq1.qa.bj4.daling.com")
+					.setVirtualHost("/" +
+							"xcpcenter")
 					.setPort(5672)
-					.setUserName("")
-					.setPassword("")
+					.setUserName("daling")
+					.setPassword("daling")
 					.build();
 
-		ds.addSink(new RMQSink<String>(config,"",new SimpleStringSchema()));
+		ds.addSink(new RMQSink<String>(config,"push_return",new SimpleStringSchema()));
 
 	}
 

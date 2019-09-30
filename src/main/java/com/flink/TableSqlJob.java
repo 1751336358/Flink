@@ -9,10 +9,8 @@ import org.apache.flink.table.api.TableEnvironment;
 import org.apache.flink.table.api.java.BatchTableEnvironment;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
 import org.apache.flink.types.Row;
+import pojo.*;
 import pojo.Student;
-import pojo.User;
-import pojo.UserStu;
-import pojo.WC;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,9 +18,18 @@ import java.util.List;
 public class TableSqlJob {
 
     public static void main(String[] args) throws Exception {
-        testUnionAll();
+        filter();
     }
 
+    //测试filter
+    public static void filter() throws Exception{
+        ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+        BatchTableEnvironment tabEnv = TableEnvironment.getTableEnvironment(env);
+        DataSource<Student> ds = env.fromCollection(Student.getStudent());
+        tabEnv.registerDataSet("stu",ds);
+        Table table = tabEnv.scan("stu").filter("sid%2=0").filter("sid!=100").select("sid,level");
+        tabEnv.toDataSet(table,Student.class).print();
+    }
     public static void testUnionAll() throws Exception{
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         BatchTableEnvironment tabEnv = TableEnvironment.getTableEnvironment(env);
