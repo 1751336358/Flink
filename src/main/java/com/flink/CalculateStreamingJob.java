@@ -171,7 +171,7 @@ public class CalculateStreamingJob {
 				}
 			}
 		});
-		out.writeAsText("F:\\a");
+		out.writeAsText("/var/a");
 	}
 	public static void testMap(StreamExecutionEnvironment env) throws Exception{
 		List<Integer> list = new ArrayList<>();
@@ -184,7 +184,7 @@ public class CalculateStreamingJob {
 				return i*i;
 			}
 		});
-		out.writeAsText("F:\\a");	//输出到磁盘
+		out.writeAsText("/var/a");	//输出到磁盘
 	}
 }
 

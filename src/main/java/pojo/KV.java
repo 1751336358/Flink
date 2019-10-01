@@ -4,8 +4,11 @@ public class KV {
 
     private Integer id;
     private Integer count;
+    private Integer cnt;
 
     private String  userName;
+
+    private String name;
 
     public KV() {
     }
@@ -13,6 +16,14 @@ public class KV {
     public KV(Integer id, Integer count) {
         this.id = id;
         this.count = count;
+    }
+
+    public Integer getCnt() {
+        return cnt;
+    }
+
+    public void setCnt(Integer cnt) {
+        this.cnt = cnt;
     }
 
     public Integer getId() {
@@ -37,6 +48,14 @@ public class KV {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
