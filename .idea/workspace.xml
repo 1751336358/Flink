@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fddbac66-91f6-49ad-b464-21da6883ffbc" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kafka/_06wordcount/KafkaStreamJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kafka/_06wordcount/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/KafkaStreamJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/KafkaStreamJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/_02kafka_employ/KafkaStreamJob$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/_02kafka_employ/KafkaStreamJob$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/_02kafka_employ/KafkaStreamJob$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/_02kafka_employ/KafkaStreamJob$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/_02kafka_employ/KafkaStreamJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/_02kafka_employ/KafkaStreamJob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/_02kafka_employ/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/_02kafka_employ/Producer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/firstFlink-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/firstFlink-1.0-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/firstFlink-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/firstFlink-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-firstFlink-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-firstFlink-1.0.jar" afterDir="false" />
@@ -24,22 +20,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="KafkaStreamJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/KafkaStreamJob.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06wordcount/KafkaStreamJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1340">
-              <caret line="77" column="144" selection-start-line="77" selection-start-column="144" selection-end-line="77" selection-end-column="144" />
+            <state relative-caret-position="-61">
+              <caret line="25" column="55" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Producer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/Producer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06wordcount/Producer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-              <folding>
-                <element signature="e#1315#1331#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="175">
+              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -85,9 +78,11 @@
         <option value="$PROJECT_DIR$/src/main/java/kafka/_05kafka2Rabbitmq/Kafka2Rabbitmq.java" />
         <option value="$PROJECT_DIR$/src/main/java/pojo/KV.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/flink/TableSqlJob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/Producer.java" />
         <option value="$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/KafkaStreamJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kafka/_06wordcount/KafkaStreamJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kafka/_06wordcount/Producer.java" />
       </list>
     </option>
   </component>
@@ -127,10 +122,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2063" />
-    <option name="y" value="77" />
-    <option name="width" value="1152" />
-    <option name="height" value="612" />
+    <option name="x" value="-130" />
+    <option name="y" value="147" />
+    <option name="width" value="1440" />
+    <option name="height" value="765" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -138,6 +133,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,7 +165,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="firstFlink" type="b2602c69:ProjectViewProjectNode" />
@@ -177,16 +173,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka" type="462c0819:PsiDirectoryNode" />
-              <item name="_01_kafka_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
+              <item name="CalculateStreamingJob.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,6 +193,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kafka._06wordcount" />
       <recent name="kafka._06trigget" />
       <recent name="com.flink" />
       <recent name="kafka._04watermark" />
@@ -219,18 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Producer">
-    <configuration name="DataSetJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.flink.DataSetJob" />
-      <module name="firstFlink" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.flink.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="Application.Producer (1)">
     <configuration name="Kafka2Rabbitmq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kafka._05kafka2Rabbitmq.Kafka2Rabbitmq" />
       <module name="firstFlink" />
@@ -238,6 +223,28 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="kafka._05kafka2Rabbitmq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="KafkaStreamJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kafka._06wordcount.KafkaStreamJob" />
+      <module name="firstFlink" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kafka._06wordcount.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Producer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kafka._06wordcount.Producer" />
+      <module name="firstFlink" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kafka._06wordcount.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -260,17 +267,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.flink.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="TriggerStreamingJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="kafka._06trigget.TriggerStreamingJob" />
-      <module name="firstFlink" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kafka._06trigget.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -317,19 +313,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.TriggerStreamingJob" />
-      <item itemvalue="Application.DataSetJob" />
       <item itemvalue="Application.Kafka2Rabbitmq" />
       <item itemvalue="Application.TableSqlJob" />
       <item itemvalue="Application.Producer" />
+      <item itemvalue="Application.Producer (1)" />
+      <item itemvalue="Application.KafkaStreamJob" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Producer (1)" />
+        <item itemvalue="Application.KafkaStreamJob" />
         <item itemvalue="Application.Producer" />
         <item itemvalue="Application.TableSqlJob" />
         <item itemvalue="Application.Kafka2Rabbitmq" />
-        <item itemvalue="Application.DataSetJob" />
-        <item itemvalue="Application.TriggerStreamingJob" />
       </list>
     </recent_temporary>
   </component>
@@ -352,14 +348,16 @@
       <workItem from="1569848630912" duration="632000" />
       <workItem from="1569899761955" duration="9335000" />
       <workItem from="1569983092982" duration="4843000" />
+      <workItem from="1570070082796" duration="4485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52643000" />
+    <option name="totallyTimeSpent" value="57128000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -371,18 +369,18 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.0836887" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5016797" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3958641" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.49160135" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2249467" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2855228" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.59238523" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5923191" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -398,23 +396,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding>
-            <element signature="e#1315#1331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TableSqlJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="63" column="45" lean-forward="true" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
@@ -524,13 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TimeAndWatermarksStreamingJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="18" column="100" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
         </state>
       </provider>
     </entry>
@@ -655,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/WC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pojo/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -704,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_05kafka2Rabbitmq/Kafka2Rabbitmq.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="633">
@@ -732,20 +692,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/KafkaStreamJob.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1340">
-          <caret line="77" column="144" selection-start-line="77" selection-start-column="144" selection-end-line="77" selection-end-column="144" />
+        <state relative-caret-position="430">
+          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/Producer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_02kafka_employ/KafkaStreamJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-          <folding>
-            <element signature="e#1315#1331#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1380">
+          <caret line="85" column="42" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/WC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/TimeAndWatermarksStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="18" column="100" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flink/CalculateStreamingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06wordcount/KafkaStreamJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kafka/_06wordcount/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
         </state>
       </provider>
     </entry>
