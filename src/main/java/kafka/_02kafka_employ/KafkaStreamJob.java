@@ -73,16 +73,17 @@ public class KafkaStreamJob {
 	//测试滚动窗口,每5s统计一次maxBy(score)
 	public static void testWindow_05() throws Exception{
 		final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+		env.getCheckpointConfig().setCheckpointInterval(10000L);
 		//读取String类型并转化为Object，测试各种算子
 		FlinkKafkaConsumer011<String> flinkKfkConsumer = new FlinkKafkaConsumer011<>("employ_topic", new SimpleStringSchema(), KafkaUtils.getKfkPreperties());
 		flinkKfkConsumer.setStartFromEarliest();
-		DataStreamSource<String> ds = env.addSource(flinkKfkConsumer).setParallelism(1);
+		DataStreamSource<String> ds = env.addSource(flinkKfkConsumer);
 		ds.map(new MapFunction<String, Employ>() {
 			@Override
 			public Employ map(String employStr) throws Exception {
 				return JSON.parseObject(employStr,Employ.class);
 			}
-		}).timeWindowAll(Time.seconds(5L)).maxBy("score").print();
+		}).setParallelism(3).timeWindowAll(Time.seconds(5L)).maxBy("score").writeAsText("/var/a");
 		env.execute("execute");
 	}
 
